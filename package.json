@@ -1,6 +1,6 @@
 {
   "name": "@nazarkulyk/passport-env",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Authentication strategy based on env variables for Passport",
   "keywords": [
     "auth",
