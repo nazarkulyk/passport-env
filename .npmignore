@@ -1,0 +1,15 @@
+examples/
+build/tests
+src/
+.buildcache/
+.vscode
+
+# Node.js
+.npmignore
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Git
+.git*
+
