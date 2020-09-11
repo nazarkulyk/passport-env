@@ -9,9 +9,9 @@ const envVariables = [userIdEnvVariableName, 'LC_CTYPE', 'LANG'];
 
 const app: Application = express();
 
-const verifyFn: VerifyFunction = (verifyHeaders, done) => {
-  console.log('have user data found', verifyHeaders);
-  return !verifyHeaders[userIdEnvVariableName] ? done(null) : done(null, { id: verifyHeaders.USER });
+const verifyFn: VerifyFunction = (verifyEnvVariables, done) => {
+  console.log('have user data found', verifyEnvVariables);
+  return !verifyEnvVariables[userIdEnvVariableName] ? done(null) : done(null, { id: verifyEnvVariables.USER });
 };
 
 const createStrategy = (): Strategy => new EnvAuthStrategy({ envVariables }, verifyFn);
